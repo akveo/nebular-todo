@@ -1,0 +1,22 @@
+:host {
+
+  display: flex;
+  align-items: center;
+  font-weight: nb-theme(text-caption-2-font-weight);
+  font-size: nb-theme(text-caption-2-font-size);
+
+  &.completed p {
+    text-decoration: line-through;
+    color: nb-theme(text-hint-color);
+  }
+
+  .no-items {
+    color: nb-theme(text-hint-color);
+    justify-content: center;
+  }
+
+  .actions {
+    padding-left: 1rem;
+    margin-left: auto;
+  }
+}

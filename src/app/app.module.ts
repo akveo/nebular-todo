@@ -1,16 +1,44 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {
+  NbThemeModule,
+  NbLayoutModule,
+  NbCardModule,
+  NbInputModule,
+  NbButtonModule,
+  NbIconModule,
+  NbListModule,
+  NbCheckboxModule,
+  NbSelectModule,
+} from '@nebular/theme';
+import { NbEvaIconsModule } from '@nebular/eva-icons';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TodoItemComponent } from './todo-item/todo-item.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TodoItemComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    RouterModule.forRoot([]),
+    NbThemeModule.forRoot({ name: 'default' }),
+    NbLayoutModule,
+    NbEvaIconsModule,
+    NbCardModule,
+    NbInputModule,
+    NbButtonModule,
+    NbIconModule,
+    NbListModule,
+    NbCheckboxModule,
+    NbSelectModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
