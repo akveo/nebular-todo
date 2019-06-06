@@ -42,8 +42,7 @@ export class TodoService {
   }
 
   add(item: Todo) {
-    this.items$
-      .next([...this.items$.getValue(), item]);
+    this.items$.next([...this.items$.getValue(), item]);
   }
 
   updateMessage(editedItem: Todo, message: string) {
