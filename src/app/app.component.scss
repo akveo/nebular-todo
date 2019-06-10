@@ -5,3 +5,8 @@ nb-card-footer {
   justify-content: space-between;
   align-items: center;
 }
+
+.no-items {
+  color: nb-theme(text-hint-color);
+  justify-content: center;
+}
