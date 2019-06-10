@@ -12,11 +12,11 @@
       </td-todo-item>
     </nb-list-item>
 
-    <nb-list-item *ngIf="(items$ | async).length === 0" class="no-items">No items yet.</nb-list-item>
+    <nb-list-item *ngIf="(itemsNumber$ | async) === 0" class="no-items">No items yet.</nb-list-item>
   </nb-list>
 
   <nb-card-footer>
-    <span> {{ (items$ | async).length }} items</span>
+    <span> {{ itemsNumber$ | async }} items</span>
     <nb-select size="medium" status="primary" selected="all" (selectedChange)="changeFilter($event)">
       <nb-option value="all">All</nb-option>
       <nb-option value="completed">Completed</nb-option>

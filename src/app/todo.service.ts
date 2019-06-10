@@ -37,6 +37,14 @@ export class TodoService {
       );
   }
 
+  filteredItemsNumber(): Observable<number> {
+    return this.filteredItems().pipe(
+      map((items: Todo[]) => {
+        return items.length;
+      }),
+    );
+  }
+
   setFilter(filer: Filter) {
     this.filter$.next(filer);
   }

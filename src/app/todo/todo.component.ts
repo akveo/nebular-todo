@@ -11,9 +11,11 @@ import { Filter, TodoService } from '../todo.service';
 export class TodoComponent {
 
   items$: Observable<Todo[]>;
+  itemsNumber$: Observable<number>;
 
   constructor(private todoService: TodoService) {
     this.items$ = this.todoService.filteredItems();
+    this.itemsNumber$ = this.todoService.filteredItemsNumber();
   }
 
   changeFilter(filterValue: Filter) {
@@ -37,5 +39,4 @@ export class TodoComponent {
   onDelete(item) {
     this.todoService.delete(item);
   }
-
 }
