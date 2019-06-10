@@ -6,7 +6,7 @@ import { Todo } from './todo';
 import { Filter, TodoService } from './todo.service';
 
 @Component({
-  selector: 'app-root',
+  selector: 'td-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

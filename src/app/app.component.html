@@ -13,11 +13,11 @@
 
       <nb-list>
         <nb-list-item *ngFor="let item of items$ | async">
-          <app-todo-item [item]="item"
+          <td-todo-item [item]="item"
                          (save)="onSave($event)"
                          (toggleComplete)="onToggleCompleted($event)"
                          (delete)="onDelete($event)">
-          </app-todo-item>
+          </td-todo-item>
         </nb-list-item>
 
         <nb-list-item *ngIf="(items$ | async).length === 0" class="no-items">No items yet.</nb-list-item>

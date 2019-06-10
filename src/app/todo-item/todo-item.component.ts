@@ -2,7 +2,7 @@ import { Component, ElementRef, EventEmitter, HostBinding, Input, Output, ViewCh
 import { Todo } from '../todo';
 
 @Component({
-  selector: 'app-todo-item',
+  selector: 'td-todo-item',
   templateUrl: './todo-item.component.html',
   styleUrls: ['./todo-item.component.scss']
 })
