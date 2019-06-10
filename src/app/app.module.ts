@@ -18,11 +18,13 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
 
 import { AppComponent } from './app.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
+import { TodoComponent } from './todo/todo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoItemComponent,
+    TodoComponent,
   ],
   imports: [
     BrowserModule,
