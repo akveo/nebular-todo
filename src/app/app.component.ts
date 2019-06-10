@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { NbThemeService } from '@nebular/theme';
+import { ThemeService } from './theme.service';
 
 @Component({
   selector: 'td-root',
@@ -9,13 +9,10 @@ import { NbThemeService } from '@nebular/theme';
 })
 export class AppComponent {
 
-  currentTheme = 'default';
-
-  constructor(private themeService: NbThemeService) {
+  constructor(private themeService: ThemeService) {
   }
 
   toggleTheme() {
-    this.currentTheme = this.currentTheme === 'default' ? 'dark' : 'default';
-    this.themeService.changeTheme(this.currentTheme);
+    this.themeService.toggleTheme();
   }
 }
