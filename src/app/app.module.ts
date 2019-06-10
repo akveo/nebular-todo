@@ -17,7 +17,7 @@ import {
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 
 import { AppComponent } from './app.component';
-import { TodoItemComponent } from './todo-item/todo-item.component';
+import { TodoItemComponent } from './todo/todo-item/todo-item.component';
 import { TodoComponent } from './todo/todo.component';
 
 @NgModule({

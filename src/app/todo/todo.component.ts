@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Todo } from '../todo';
-import { Filter, TodoService } from '../todo.service';
+import { Todo } from './todo';
+import { Filter, TodoService } from './todo.service';
 
 @Component({
   selector: 'td-todo',
