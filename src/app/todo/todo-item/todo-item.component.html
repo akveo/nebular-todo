@@ -1,0 +1,31 @@
+<nb-checkbox [attr.disabled]="item.inEdit" [value]="item.completed" (valueChange)="onToggleComplete(item, $event)">
+</nb-checkbox>
+
+<ng-container *ngIf="!item.inEdit">{{ item.message }}</ng-container>
+
+<input nbInput
+       fullWidth
+       [hidden]="!item.inEdit"
+       [value]="item.message"
+       fieldSize="small"
+       shape="rectangle"
+       #input
+       (keyup.enter)="onSave(item, input.value)" />
+
+<div class="actions">
+
+  <ng-container *ngIf="item.inEdit && item.completed; else viewMode">
+    <button nbButton status="success" ghost size="tiny" (click)="onSave(item, input.value)">
+      <nb-icon icon="save-outline"></nb-icon>
+    </button>
+  </ng-container>
+
+  <ng-template #viewMode>
+    <button nbButton status="info" ghost size="tiny" (click)="onEdit(item)">
+      <nb-icon icon="edit-2-outline"></nb-icon>
+    </button>
+    <button nbButton status="danger" ghost size="tiny" (click)="onDelete(item)">
+      <nb-icon icon="trash-2-outline"></nb-icon>
+    </button>
+  </ng-template>
+</div>

@@ -1,0 +1,18 @@
+@import '../../../themes';
+
+:host {
+  display: flex;
+  align-items: center;
+  font-weight: nb-theme(text-caption-2-font-weight);
+  font-size: nb-theme(text-caption-2-font-size);
+}
+
+:host.completed {
+  text-decoration: line-through;
+  color: nb-theme(text-hint-color);
+}
+
+.actions {
+  padding-left: 1rem;
+  margin-left: auto;
+}

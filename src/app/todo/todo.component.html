@@ -1,0 +1,26 @@
+<nb-card>
+  <nb-card-header>
+    <input nbInput fieldSize="giant" fullWidth placeholder="Add item" #input (keyup.enter)="onAdd(input.value); input.value = ''" />
+  </nb-card-header>
+
+  <nb-list>
+    <nb-list-item *ngFor="let item of items$ | async">
+      <td-todo-item [item]="item"
+                    (save)="onSave($event)"
+                    (toggleComplete)="onToggleCompleted($event)"
+                    (delete)="onDelete($event)">
+      </td-todo-item>
+    </nb-list-item>
+
+    <nb-list-item *ngIf="(itemsNumber$ | async) === 0" class="no-items">No items yet.</nb-list-item>
+  </nb-list>
+
+  <nb-card-footer>
+    <span> {{ itemsNumber$ | async }} items</span>
+    <nb-select size="medium" status="primary" selected="all" (selectedChange)="changeFilter($event)">
+      <nb-option value="all">All</nb-option>
+      <nb-option value="completed">Completed</nb-option>
+      <nb-option value="active">Active</nb-option>
+    </nb-select>
+  </nb-card-footer>
+</nb-card>

@@ -1,10 +1,18 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ThemeService } from './theme.service';
 
 @Component({
-  selector: 'app-root',
+  selector: 'td-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
-  title = 'nebular-todo';
+
+  constructor(private themeService: ThemeService) {
+  }
+
+  toggleTheme() {
+    this.themeService.toggleTheme();
+  }
 }
